@@ -22,11 +22,11 @@ function longestSubString(s){
                longest_length = Math.max(longest_length, i - start + 1); // for the longest substring
           }
           else{ // for the repeated string
-             while (strArray[start] !== current_char) {
-        visitedChars.delete(strArray[start]);
-        start++;
-      }
-      start++; 
+          while (strArray[start] !== current_char) {
+           visitedChars.delete(strArray[start]);
+            start++;
+         }
+         start++; 
           }
      }
      return longest_length;
