@@ -15,18 +15,18 @@
 // current element - min price
 
 function buyAndSell(prices){
-     let minPrice = Infinity; // Initialize minimum price to a very large value
-  let maxProfit = 0; // Initialize maximum profit to 0
+     let min_price = Infinity;
+     let max_price = 0;
+     for(let i = 0 ; i < prices.length; i++){
+          if( prices[i] < min_price){
+               min_price = prices[i];
+          }
+          else if(prices[i] - min_price > max_price){
+               max_price = prices[i] - min_price;
+          }
+     }
 
-  for (let i = 0; i < prices.length; i++) {
-    if (prices[i] < minPrice) {
-      minPrice = prices[i]; // Update minimum price if a smaller price is found
-    } else if (prices[i] - minPrice > maxProfit) {
-      maxProfit = prices[i] - minPrice; // Update maximum profit if a larger profit is obtained
-    }
-  }
-
-  return maxProfit;
+      return max_price;
 
 }
 
