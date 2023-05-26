@@ -38,22 +38,4 @@
 // -> 2 => 1* 3*4 => 1
 // -> 3 => 1* 2  *4 
 
-function  expectSelf(nums){
-     let answer = [];
-     let left = 1;
-     let right = 1;
-     for(let i = 0; i < nums.length; i++){
-        answer[i] = left;
-        left *= nums[i];
-     }
-
-     for(let i = nums.length; i <= 0; i--){
-          answer[i] *= right;
-          right *= nums[i];
-     }
-
-     return answer;
-}
-
-
 expectSelf([1,2,3,4])
